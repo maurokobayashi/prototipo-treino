@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>Abdominal Simples | Série 1 de 3</title>
+    <link rel="stylesheet" href="css/materialize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <!-- Navbar : begin -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper valign-wrapper">
+          <ul class="left">
+            <li><a href="javascript.html"><i class="mdi-navigation-arrow-back"></i></a></li>
+          </ul>
+          <span class="center-block center-align">
+            <span href="#!" class="flow-text valign">Série 1 de 3 - Abdominal Simples</span>
+          </span>
+          <ul class="right">
+            <li><a href="mobile.html"><i class="mdi-navigation-more-vert"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar : end -->
+
+    <br><br>
+
+    <!-- Container : begin -->
+    <div class="container">
+      <br>
+
+      <div class="row valign-wrapper">
+        <div class="col s1 m3 left-align">
+          <i class="mdi-navigation-arrow-back small tooltipped" data-position="top" data-delay="50" data-tooltip="Anterior"></i>
+        </div>
+        <div class="col s10 m6">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <video poster="" controls="" preload="" style="text-align:center;width:100%;">
+                <source src="http://m.sworkit.com/assets/exercises/Videos/AbdominalCrunch.mp4">
+                <source src="http://m.sworkit.com/assets/Video/AbdominalCrunch.webm" type="video/webm" poster="">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">
+                Abdominal Simples
+                <i class="mdi-action-info-outline right"></i>
+              </span>
+              <p>
+                <i class="mdi-image-timer left"></i>
+                <a href="#">45 segundos</a>
+                <input id="exercise-countdown" type="hidden" value="45000">
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">
+                Abdominal Simples
+                <i class="mdi-navigation-close right"></i>
+              </span>
+              <br>
+              <img src="http://nickmorgandesigns.com/images/profile-circle.png" style="width: 100px;">
+              <p>"O primeiro passo é ficar deitado com as costas encostadas no chão, e com as pernas flexionadas, com os joelhos apontando para o teto e como os pés apoiados no chão. Depois, basta levantar a parte superior do corpo apenas com a força dos músculos abdominais, sem ter pressa ou sem tentar encostar o peito nos joelhos flexionados."</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s1 m3 right-align">
+          <i class="mdi-navigation-arrow-forward small tooltipped" data-position="top" data-delay="50" data-tooltip="Próximo"></i>
+        </div>
+      </div>
+    </div>
+    <!-- Container : end -->
+
+    <!-- Footer : begin -->
+    <footer class="page-footer blue-grey lighten-5" style="padding-bottom: 5px;">
+      <div class="container">
+        <div class="row">
+          <div class="col m3 s3 left-align">
+            <a id="sound-on" class="btn-floating btn-large tooltipped waves-effect waves-light red" data-position="top" data-delay="50" data-tooltip="Som ligado"><i class="mdi-av-volume-up"></i></a>
+            <a id="sound-off" class="btn-floating btn-large tooltipped waves-effect waves-light red accent-1" data-position="top" data-delay="50" data-tooltip="Som desligado" style="display: none;"><i class="mdi-av-volume-off"></i></a>
+          </div>
+          <div class="col m6 s6 center-block center-align valign-wrapper">
+            <h4 style="margin-top: 0; margin-bottom: 0px;">
+              <i class="mdi-image-timer tiny"></i>
+              <span id="countdown" style="margin-left: -3px;">45.0</span>
+              <span style="margin-left: -7px; font-size: 1.2rem;">s</span>
+            </h4>
+            <a id="reset-countdown" class="btn-floating btn-small tooltipped waves-effect waves-light center-block center-align red" data-position="right" data-delay="50" data-tooltip="Reiniciar cronômetro"><i class="mdi-av-loop"></i></a>
+          </div>
+          <div class="col m3 s3">
+            <a id="start-countdown" class="btn-floating btn-large tooltipped waves-effect waves-light right red" data-position="top" data-delay="50" data-tooltip="Iniciar cronômetro"><i class="mdi-av-play-arrow"></i></a>
+            <a id="pause-countdown" class="btn-floating btn-large tooltipped waves-effect waves-light right red" data-position="top" data-delay="50" data-tooltip="Pausar cronômetro" style="display: none;"><i class="mdi-av-pause"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer : end -->
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/timer.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.tooltipped').tooltip({delay: 50});
+
+        $('#sound-on').click(function(){
+          $('#sound-on').hide();
+          $('#sound-off').show();
+        })
+
+        $('#sound-off').click(function(){
+          $('#sound-off').hide();
+          $('#sound-on').show();
+        })
+      });
+    </script>
+  </body>
+
+</html>
