@@ -2,6 +2,7 @@
   <head>
     <title>Abdominal Simples | Série 1 de 3</title>
     <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/custom_materialize.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta charset="UTF-8">
   </head>
@@ -12,36 +13,50 @@
       <nav>
         <div class="nav-wrapper valign-wrapper">
           <ul class="left">
-            <li><a href="javascript.html"><i class="mdi-navigation-arrow-back"></i></a></li>
+            <li><a href="workout.html"><i class="mdi-navigation-arrow-back"></i></a></li>
           </ul>
           <span class="center-block center-align">
-            <span href="#!" class="flow-text valign">Série 1 de 3 - Abdominal Simples</span>
+            <span href="#!" class="flow-text valign">Série 1 - Membros inferiores</span>
           </span>
           <ul class="right">
-            <li><a href="mobile.html"><i class="mdi-navigation-more-vert"></i></a></li>
+            <li><a id="sidenav-toggle" href="#" data-activates="slide-out"><i class="mdi-navigation-menu"></i></a></li>
           </ul>
         </div>
       </nav>
     </div>
     <!-- Navbar : end -->
 
-    <br><br>
+    <!-- Sidenav : begin -->
+    <ul id="slide-out" class="side-nav collection with-header">
+      <li class="collection-header"><h5>Alunos</h5></li>
+      <a href="alunos_new.html" class="collection-item"><i class="mdi-social-person-add secondary-content"></i> Novo aluno</a>
+      <a href="alunos.html" class="collection-item"><i class="mdi-social-people secondary-content"></i>Meus alunos</a>
+      <li class="collection-header"><h5>Treinos</h5></li>
+      <a href="#!" class="collection-item"><i class="mdi-action-event secondary-content"></i>Agenda</a>
+      <a href="workout.html" class="collection-item"><i class="mdi-editor-insert-chart secondary-content"></i>Relatórios</a>
+      <a href="#!" class="collection-item"><i class="mdi-notification-sms-failed secondary-content"></i>Feedbacks</a>
+      <a href="#!" class="collection-item"><i class="mdi-maps-local-attraction secondary-content"></i>Modelos</a>
+      <a href="#!" class="collection-item"><i class="mdi-action-accessibility secondary-content"></i>Exercícios</a>
+      <li class="collection-header"><h5>Configurações</h5></li>
+      <a href="#!" class="collection-item"><i class="mdi-action-account-circle secondary-content"></i>Minha conta</a>
+      <a href="#!" class="collection-item"><i class="mdi-action-https secondary-content"></i>Preferências</a>
+      <a href="signin.html" class="collection-item"><i class="mdi-action-input secondary-content"></i>Sair</a>
+    </ul>
+    <!-- Sidenav : end -->
+
 
     <!-- Container : begin -->
-    <div class="container">
+    <div class="content">
       <br>
 
       <div class="row valign-wrapper">
-        <div class="col s1 m3 left-align">
-          <i class="mdi-navigation-arrow-back small tooltipped" data-position="top" data-delay="50" data-tooltip="Anterior"></i>
-        </div>
-        <div class="col s10 m6">
+        <div class="col s12">
           <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
               <video poster="" controls="" preload="" style="text-align:center;width:100%;">
                 <source src="http://m.sworkit.com/assets/exercises/Videos/AbdominalCrunch.mp4">
                 <source src="http://m.sworkit.com/assets/Video/AbdominalCrunch.webm" type="video/webm" poster="">
-                Your browser does not support the video tag.
+                Seu navegador não suporta este formato de vídeo.
               </video>
             </div>
             <div class="card-content">
@@ -65,9 +80,6 @@
               <p>"O primeiro passo é ficar deitado com as costas encostadas no chão, e com as pernas flexionadas, com os joelhos apontando para o teto e como os pés apoiados no chão. Depois, basta levantar a parte superior do corpo apenas com a força dos músculos abdominais, sem ter pressa ou sem tentar encostar o peito nos joelhos flexionados."</p>
             </div>
           </div>
-        </div>
-        <div class="col s1 m3 right-align">
-          <i class="mdi-navigation-arrow-forward small tooltipped" data-position="top" data-delay="50" data-tooltip="Próximo"></i>
         </div>
       </div>
     </div>
@@ -104,6 +116,15 @@
     <script type="text/javascript" src="js/timer.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
+
+        // Initialize collapse button
+        $('#sidenav-toggle').sideNav({
+            menuWidth: 300, // Default is 240
+            edge: 'right', // Choose the horizontal origin
+            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+          }
+        );
+
         $('.tooltipped').tooltip({delay: 50});
 
         $('#sound-on').click(function(){

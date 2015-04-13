@@ -1,0 +1,65 @@
+nav {
+  background-color: #333;
+  color: #fff;
+}
+nav ul a {
+  color: #fff;
+}
+.side-nav i {
+  font-size: 1.4em;
+}
+
+ul.tabs {
+  margin-bottom: 5px;
+}
+
+/* collection */
+.collection {
+  border-left: none;
+  border-right: none;
+  background-color: #fff;
+  margin: 0;
+}
+a.collection-item {
+  color: #333 !important;
+  padding-left: 25px !important;
+  padding: 13px 20px 13px 25px !important;
+}
+.collection-item a {
+  color: rgba(0, 0, 0, 0.87);
+}
+.collection-item a:hover {
+  color: #26a69a;
+}
+
+.collapsible {
+  border-right: none;
+  border-left: none;
+  box-shadow: none;
+}
+.collapsible-header {
+  padding-left: 25px;
+  height: 3.5rem;
+  line-height: 3.5rem;
+}
+.collapsible-header:hover {
+  background-color: #f0f0f0;
+  color: #555;
+}
+.collapsible-header i {
+  float: right;
+}
+
+li.active .collapsible-header, li.active .collapsible-header small {
+  background-color: #E8E8E8;
+  color: #555;
+}
+
+.collapsible-body {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.no-padding {
+  padding: 0 !important;
+}

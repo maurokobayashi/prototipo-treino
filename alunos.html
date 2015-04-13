@@ -1,0 +1,194 @@
+<html>
+  <head>
+    <title>Meus alunos | Fitness Hero</title>
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/custom_materialize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    <style type="text/css">
+      .content {
+        margin-top: 10px;
+      }
+      .tabs {
+        margin-top: 15px;
+      }
+      .collection-item i.secondary-content {
+        font-size: 1.5rem;
+        color: #777;
+      }
+      small {
+        color: #999;
+        margin-left: 10px;
+        letter-spacing: .02rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar : begin -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper valign-wrapper">
+          <ul class="left">
+            <li><a href="exercise1.html"><i class="mdi-navigation-arrow-back"></i></a></li>
+          </ul>
+          <span class="center-block center-align">
+            <span href="#!" class="flow-text valign">Meus alunos</span>
+          </span>
+          <ul class="right">
+            <li><a id="sidenav-toggle" href="#" data-activates="slide-out"><i class="mdi-navigation-menu"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar : end -->
+
+    <!-- Sidenav : begin -->
+    <ul id="slide-out" class="side-nav collection with-header">
+      <li class="collection-header"><h5>Alunos</h5></li>
+      <a href="alunos_new.html" class="collection-item"><i class="mdi-social-person-add secondary-content"></i> Novo aluno</a>
+      <a href="alunos.html" class="collection-item"><i class="mdi-social-people secondary-content"></i>Meus alunos</a>
+      <li class="collection-header"><h5>Treinos</h5></li>
+      <a href="#!" class="collection-item"><i class="mdi-action-event secondary-content"></i>Agenda</a>
+      <a href="workout.html" class="collection-item"><i class="mdi-editor-insert-chart secondary-content"></i>Relatórios</a>
+      <a href="#!" class="collection-item"><i class="mdi-notification-sms-failed secondary-content"></i>Feedbacks</a>
+      <a href="#!" class="collection-item"><i class="mdi-maps-local-attraction secondary-content"></i>Modelos</a>
+      <a href="#!" class="collection-item"><i class="mdi-action-accessibility secondary-content"></i>Exercícios</a>
+      <li class="collection-header"><h5>Configurações</h5></li>
+      <a href="#!" class="collection-item"><i class="mdi-action-account-circle secondary-content"></i>Minha conta</a>
+      <a href="#!" class="collection-item"><i class="mdi-action-https secondary-content"></i>Preferências</a>
+      <a href="signin.html" class="collection-item"><i class="mdi-action-input secondary-content"></i>Sair</a>
+    </ul>
+    <!-- Sidenav : end -->
+
+    <div class="row">
+      <div class="col s12 no-padding">
+        <ul class="tabs">
+          <li class="tab col s3"><a href="#new">Novos<span class="badge" style="float: none; font-size: .7em; font-weight: 500; position: relative; top: -5px;">(2)</span></a></li>
+          <li class="tab col s3"><a class="active" href="#actives">Ativos</a></li>
+          <li class="tab col s3"><a href="#inactives"> Inativos</a></li>
+        </ul>
+      </div>
+
+      <!-- Novos : begin -->
+      <div id="new" class="col s12 no-padding">
+        <div class="row">
+          <form>
+            <div class="input-field col s12" style="margin-top: 0;">
+              <input id="search" placeholder="Buscar" type="text" class="validate" length="25">
+              <i class="mdi-action-search prefix" style="float: right; right: 1px; top: 1px; color: #26a69a;"></i>
+            </div>
+          </form>
+          <div class="col s12 no-padding">
+            <ul class="collection">
+              <a href="alunos_edit.html" class="collection-item">
+                Guilherme Sipoloni<small>19 anos</small>
+                <i class="secondary-content mdi-navigation-chevron-right"></i>
+              </a>
+              <a href="alunos_edit.html" class="collection-item">
+                Jessica Félix<small>28 anos</small>
+                <i class="secondary-content mdi-navigation-chevron-right"></i>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Novos : end -->
+
+      <!-- Ativos : begin -->
+      <div id="actives" class="col s12 no-padding">
+        <div class="row">
+          <form>
+            <div class="input-field col s12" style="margin-top: 0;">
+              <input id="search" placeholder="Buscar" type="text" class="validate" length="25">
+              <i class="mdi-action-search prefix" style="float: right; right: 1px; top: 1px; color: #26a69a;"></i>
+            </div>
+          </form>
+          <div class="col s12 no-padding">
+            <ul class="collection">
+              <a href="alunos_edit.html" class="collection-item">
+                Holger Wiehen<small>32 anos</small>
+                <i class="secondary-content mdi-navigation-chevron-right"></i>
+              </a>
+              <a href="alunos_edit.html" class="collection-item">
+                Mauro Kobayashi<small>28 anos</small>
+                <i class="secondary-content mdi-navigation-chevron-right"></i>
+              </a>
+              <a href="alunos_edit.html" class="collection-item">
+                Rosângela Almeida<small>24 anos</small>
+                <i class="secondary-content mdi-navigation-chevron-right"></i>
+              </a>
+              <a href="alunos_edit.html" class="collection-item">
+                William Souza<small>30 anos</small>
+                <i class="secondary-content mdi-navigation-chevron-right"></i>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ativos : end -->
+
+      <!-- Inativos : begin -->
+      <div id="inactives" class="col s12 no-padding">
+        <div class="row">
+          <form>
+            <div class="input-field col s12" style="margin-top: 0;">
+              <input id="search" placeholder="Buscar" type="text" class="validate" length="25">
+              <i class="mdi-action-search prefix" style="float: right; right: 1px; top: 1px; color: #26a69a;"></i>
+            </div>
+          </form>
+          <div class="col s12 no-padding">
+            <ul class="collection">
+              <a href="alunos_edit.html" class="collection-item">
+                Filipe Toledo<small>19 anos</small>
+                <i class="secondary-content mdi-navigation-chevron-right"></i>
+              </a>
+              <a href="alunos_edit.html" class="collection-item">
+                Miguel Pupo<small>23 anos</small>
+                <i class="secondary-content mdi-navigation-chevron-right"></i>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Inativos : end -->
+
+      <div class="row">
+        <div class="col s12">
+          <a href="alunos_new.html" class="waves-effect waves-light btn" style="display: block;">Adicionar aluno</a>
+        </div>
+      </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/timer.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // Initialize collapse button
+        $('#sidenav-toggle').sideNav({
+            menuWidth: 300, // Default is 240
+            edge: 'right', // Choose the horizontal origin
+            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+          }
+        );
+
+        // Initializations
+        $('.tooltipped').tooltip({delay: 50});
+        $('select').material_select();
+        $('.datepicker').pickadate({
+          selectMonths: true, // Creates a dropdown to control month
+          selectYears: 100 // Creates a dropdown of 15 years to control year
+        });
+
+        $('#first_name').focus();
+
+
+      });
+    </script>
+  </body>
+
+</html>

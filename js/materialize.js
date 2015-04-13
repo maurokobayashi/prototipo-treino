@@ -5368,7 +5368,7 @@ DatePicker.prototype.nodes = function( isOpen ) {
 
             // If years selector is set to a literal "true", set it to 5. Otherwise
             // divide in half to get half before and half after focused year.
-            numberYears = settings.selectYears === true ? 5 : ~~( settings.selectYears / 2 )
+            numberYears = settings.selectYears === true ? 5 : ~~( settings.selectYears )
 
             // If there are years to select, add a dropdown menu.
             if ( numberYears ) {
@@ -5377,7 +5377,7 @@ DatePicker.prototype.nodes = function( isOpen ) {
                     minYear = minLimitObject.year,
                     maxYear = maxLimitObject.year,
                     lowestYear = focusedYear - numberYears,
-                    highestYear = focusedYear + numberYears
+                    highestYear = focusedYear + 2
 
                 // If the min year is greater than the lowest year, increase the highest year
                 // by the difference and set the lowest year to the min year.
@@ -5615,21 +5615,21 @@ DatePicker.defaults = (function( prefix ) {
         labelYearSelect: 'Select a year',
 
         // Months and weekdays
-        monthsFull: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
-        monthsShort: [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
-        weekdaysFull: [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
-        weekdaysShort: [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
+        monthsFull: [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
+        monthsShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+        weekdaysFull: [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado' ],
+        weekdaysShort: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb' ],
 
         // Materialize modified
-        weekdaysLetter: [ 'S', 'M', 'T', 'W', 'T', 'F', 'S' ],
+        weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
 
         // Today and clear
-        today: 'Today',
-        clear: 'Clear',
-        close: 'Close',
+        today: 'Hoje',
+        clear: 'Limpar',
+        close: 'Ok',
 
         // The format to show on the `input` element
-        format: 'd mmmm, yyyy',
+        format: 'dd/mm/yyyy',
 
         // Classes
         klass: {

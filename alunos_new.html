@@ -1,0 +1,596 @@
+<html>
+  <head>
+    <title>Adicionar aluno | Fitness Hero</title>
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/custom_materialize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    <style type="text/css">
+      .content {
+        margin-top: 10px;
+      }
+      .tabs {
+        margin-top: 15px;
+      }
+      form.profile .row {
+        margin-bottom: 0;
+      }
+      .select-wrapper input.select-dropdown {
+        padding-top: 15px;
+        height: 2.4rem;
+      }
+      .select-wrapper .mdi-navigation-arrow-drop-down {
+        top: 1rem;
+      }
+      .switch {
+        margin-top: 8px;
+      }
+
+      small {
+        color: #999;
+        margin-left: 10px;
+        letter-spacing: .02rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar : begin -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper valign-wrapper">
+          <ul class="left">
+            <li><a href="exercise1.html"><i class="mdi-navigation-arrow-back"></i></a></li>
+          </ul>
+          <span class="center-block center-align">
+            <span href="#!" class="flow-text valign">Adicionar aluno</span>
+          </span>
+          <ul class="right">
+            <li><a id="sidenav-toggle" href="#" data-activates="slide-out"><i class="mdi-navigation-menu"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar : end -->
+
+    <!-- Sidenav : begin -->
+    <ul id="slide-out" class="side-nav collection with-header">
+      <li class="collection-header"><h5>Alunos</h5></li>
+      <a href="alunos_new.html" class="collection-item"><i class="mdi-social-person-add secondary-content"></i> Novo aluno</a>
+      <a href="alunos.html" class="collection-item"><i class="mdi-social-people secondary-content"></i>Meus alunos</a>
+      <li class="collection-header"><h5>Treinos</h5></li>
+      <a href="#!" class="collection-item"><i class="mdi-action-event secondary-content"></i>Agenda</a>
+      <a href="workout.html" class="collection-item"><i class="mdi-editor-insert-chart secondary-content"></i>Relatórios</a>
+      <a href="#!" class="collection-item"><i class="mdi-notification-sms-failed secondary-content"></i>Feedbacks</a>
+      <a href="#!" class="collection-item"><i class="mdi-maps-local-attraction secondary-content"></i>Modelos</a>
+      <a href="#!" class="collection-item"><i class="mdi-action-accessibility secondary-content"></i>Exercícios</a>
+      <li class="collection-header"><h5>Configurações</h5></li>
+      <a href="#!" class="collection-item"><i class="mdi-action-account-circle secondary-content"></i>Minha conta</a>
+      <a href="#!" class="collection-item"><i class="mdi-action-https secondary-content"></i>Preferências</a>
+      <a href="signin.html" class="collection-item"><i class="mdi-action-input secondary-content"></i>Sair</a>
+    </ul>
+    <!-- Sidenav : end -->
+
+    <div class="row">
+      <div class="col s12 no-padding">
+        <ul class="tabs">
+          <li class="tab col s3"><a class="active" href="#test2"><i class="mdi-social-person" style="font-size: 1.8em; top: 5px; position: relative;"></i> Perfil</a></li>
+          <li class="tab col s3"><a href="#test3"><i class="mdi-action-assignment small" style="font-size: 1.6em; top: 5px; position: relative;"></i> Avaliação</a></li>
+        </ul>
+      </div>
+
+      <!-- Perfil : begin -->
+      <div id="test2" class="col s12 no-padding">
+        <br>
+        <div class="row valign-wrapper">
+          <div class="col s12 no-padding">
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header active">
+                  <i class="mdi-navigation-expand-more"></i>
+                  Dados pessoais
+                </div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <form class="col s12 profile">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="first_name" type="text" class="validate" length="25">
+                          <label for="first_name">Nome</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="last_name" type="text" class="validate" length="50">
+                          <label for="last_name">Sobrenome</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="email" type="email" class="validate" length="75">
+                          <label for="email">Email</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="mobile" type="tel" class="validate">
+                          <label for="mobile">Celular</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input type="date" class="datepicker">
+                          <label for="date">Nascimento</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6" style="margin-top: 0;">
+                          <label>Sexo</label>
+                          <select>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="1">Feminino</option>
+                            <option value="2">Masculino</option>
+                            <option value="3">Outro</option>
+                          </select>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="description" type="text" class="validate" length="50">
+                          <label for="description">Local do treino<small>- ex: Condomínio La Ville</small></label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s9">
+                          <input id="street" type="text" class="validate" length="150">
+                          <label for="street">Logradouro<small>- Rua, avenida, etc.</small></label>
+                        </div>
+                        <div class="input-field col s3">
+                          <input id="number" type="text" class="validate" length="50">
+                          <label for="number">Número</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="complement" type="text" class="validate" length="50">
+                          <label for="complement">Complemento</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="district" type="text" class="validate" length="75">
+                          <label for="district">Bairro</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="complement" type="text" class="validate" length="50">
+                          <label for="complement">Cidade</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="district" type="text" class="validate" length="75">
+                          <label for="district">Estado/UF</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="textarea1" class="materialize-textarea" length="255"></textarea>
+                          <label for="textarea1">Observações</label>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col s12">
+                          <a class="waves-effect waves-light btn" style="display: block;">Salvar</a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Perfil : end -->
+
+      <!-- Anamnese : begin -->
+      <div id="test3" class="col s12 no-padding">
+        <br>
+        <div class="row valign-wrapper">
+          <div class="col s12 no-padding">
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header">
+                  <i class="mdi-navigation-expand-more"></i>
+                  Anamnese
+                </div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <form class="col s12 profile">
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <label>Objetivo do treino</label>
+                          <select>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="1">Perda de peso</option>
+                            <option value="2">Hipertrofia</option>
+                            <option value="3">Condicionamento</option>
+                            <option value="4">Fortalecimento</option>
+                            <option value="5">Ganho de peso</option>
+                            <option value="6">Performance</option>
+                            <option value="7">Outro</option>
+                          </select>
+                        </div>
+                      </div>
+                       <div class="row">
+                        <div class="input-field col s12">
+                          <input id="goal2" type="text" class="validate" length="100">
+                          <label for="goal2">Objetivo secundário</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <label for="weight">Frequência de treinos</label>
+                          <select>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="1">1x por semana</option>
+                            <option value="2">2x por semana</option>
+                            <option value="3">3x por semana</option>
+                            <option value="4">4x por semana</option>
+                            <option value="5">5x por semana</option>
+                            <option value="6">6x por semana</option>
+                            <option value="7">7x por semana</option>
+                          </select>
+                        </div>
+                        <div class="input-field col s6">
+                          <label for="height">Período preferencial</label>
+                          <select>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="1">Manhã</option>
+                            <option value="2">Almoço</option>
+                            <option value="3">Tarde</option>
+                            <option value="4">Noite</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="weight" type="number" class="validate" length="3">
+                          <label for="weight">Peso (kg)</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="height" type="number" class="validate" length="3">
+                          <label for="height">Altura (cm)</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <label>Nível de condicionamento</label>
+                          <select>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="1">Sedentário</option>
+                            <option value="2">Iniciante</option>
+                            <option value="3">Intermediário</option>
+                            <option value="4">Avançado</option>
+                            <option value="4">Atleta</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="pa" type="text" class="validate" length="12">
+                          <label for="pa">Pressão arterial</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="fc" type="number" class="validate" length="3">
+                          <label for="fc">F.C. em repouso</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="diseases" class="materialize-textarea" length="255"></textarea>
+                          <label for="diseases">Doenças anteriores</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="diseases" class="materialize-textarea" length="255"></textarea>
+                          <label for="injuries">Lesões anteriores</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="surgeries" class="materialize-textarea" length="255"></textarea>
+                          <label for="surgeries">Cirurgias anteriores</label>
+                        </div>
+                      </div>
+
+
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="textarea1" class="materialize-textarea" length="255"></textarea>
+                          <label for="textarea1">Observações</label>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <a class="waves-effect waves-light btn" style="display: block;">Salvar</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  <i class="mdi-navigation-expand-more"></i>
+                  PAR-Q
+                </div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <form class="col s12 profile">
+                      <ul class="collection">
+                        <li class="collection-item">
+                          <div>
+                            1. Seu médico já disse que você possui um problema cardíaco e recomendou atividades físicas apenas sob supervisão médica?
+                            <div class="switch">
+                              <label>
+                                Não
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                Sim
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="collection-item">
+                          <div>
+                            2. Você tem dor no peito provocada por atividades físicas?
+                            <div class="switch">
+                              <label>
+                                Não
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                Sim
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="collection-item">
+                          <div>
+                            3. Você sentiu dor no peito no último mês?
+                            <div class="switch">
+                              <label>
+                                Não
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                Sim
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="collection-item">
+                          <div>
+                            4. Você já perdeu a consciência em alguma ocasião ou sofreu alguma queda em virtude de tontura?
+                            <div class="switch">
+                              <label>
+                                Não
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                Sim
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="collection-item">
+                          <div>
+                            5.Você tem algum problema ósseo ou articular que poderia agravar-se com a prática de atividades físicas?
+                            <div class="switch">
+                              <label>
+                                Não
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                Sim
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="collection-item">
+                          <div>
+                            6. Algum médico já lhe prescreveu medicamento para pressão arterial ou para o coração?
+                            <div class="switch">
+                              <label>
+                                Não
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                Sim
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="collection-item">
+                          <div>
+                            7. Você tem conhecimento, por informação médica ou pela própria experiência, de algum motivo que poderia impedí-lo de participar de atividades fisicas sem supervisão médica?
+                            <div class="switch">
+                              <label>
+                                Não
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                Sim
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <br>
+                      <div class="row">
+                        <a class="waves-effect waves-light btn" style="display: block;">Salvar</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  <i class="mdi-navigation-expand-more"></i>
+                  Medidas corporais
+                </div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <form class="col s12 profile">
+
+                      <p style="color: #ee6e73; padding: 25px 0 0 5px;">Perímetro (centímetros)</p>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="torax" type="number" class="validate" length="3">
+                          <label for="torax">Tórax</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="cintura" type="number" class="validate" length="3">
+                          <label for="cintura">Cintura</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="torax" type="number" class="validate" length="3">
+                          <label for="torax">Abdômem</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="cintura" type="number" class="validate" length="3">
+                          <label for="cintura">Quadril</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="torax" type="number" class="validate" length="3">
+                          <label for="torax">Braço esquerdo</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="cintura" type="number" class="validate" length="3">
+                          <label for="cintura">Braço direito</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="torax" type="number" class="validate" length="3">
+                          <label for="torax">Antebraço esquerdo</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="cintura" type="number" class="validate" length="3">
+                          <label for="cintura">Antebraço direito</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="torax" type="number" class="validate" length="3">
+                          <label for="torax">Coxa esquerda</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="cintura" type="number" class="validate" length="3">
+                          <label for="cintura">Coxa direita</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="torax" type="number" class="validate" length="3">
+                          <label for="torax">Panturrilha esquerda</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="cintura" type="number" class="validate" length="3">
+                          <label for="cintura">Panturrilha direita</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="textarea1" class="materialize-textarea" length="255"></textarea>
+                          <label for="textarea1">Outras medidas</label>
+                        </div>
+                      </div>
+
+                      <p style="color: #ee6e73; padding: 35px 0 0 5px;">Dobras cutâneas (milímetros)</p>
+
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="torax" type="number" class="validate" length="3">
+                          <label for="torax">Tríceps</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="cintura" type="number" class="validate" length="3">
+                          <label for="cintura">Peito</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="torax" type="number" class="validate" length="3">
+                          <label for="torax">Sub-axilar</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="cintura" type="number" class="validate" length="3">
+                          <label for="cintura">Sub-escapular</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="torax" type="number" class="validate" length="3">
+                          <label for="torax">Abdominal</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="cintura" type="number" class="validate" length="3">
+                          <label for="cintura">Supra-ilíaca</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="torax" type="number" class="validate" length="3">
+                          <label for="torax">Coxa</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="textarea1" class="materialize-textarea" length="255"></textarea>
+                          <label for="textarea1">Outras medidas</label>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <a class="waves-effect waves-light btn" style="display: block;">Salvar</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Anamnese : end -->
+
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/timer.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // Initialize collapse button
+        $('#sidenav-toggle').sideNav({
+            menuWidth: 300, // Default is 240
+            edge: 'right', // Choose the horizontal origin
+            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+          }
+        );
+
+        // Initializations
+        $('.tooltipped').tooltip({delay: 50});
+        $('select').material_select();
+        $('.datepicker').pickadate({
+          selectMonths: true, // Creates a dropdown to control month
+          selectYears: 100 // Creates a dropdown of 15 years to control year
+        });
+
+        $('#first_name').focus();
+
+
+      });
+    </script>
+  </body>
+
+</html>
