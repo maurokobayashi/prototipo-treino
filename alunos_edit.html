@@ -550,6 +550,48 @@
                   </div>
                 </div>
               </li>
+              <li>
+                <div class="collapsible-header">
+                  <i class="mdi-navigation-expand-more"></i>
+                  Fotos
+                </div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <div class="slider">
+                      <ul class="slides">
+                        <li>
+                          <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+                          <div class="caption center-align">
+                            <h3>Frente</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                          </div>
+                        </li>
+                        <li>
+                          <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+                          <div class="caption left-align">
+                            <h3>Perfil</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                          </div>
+                        </li>
+                        <li>
+                          <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+                          <div class="caption right-align">
+                            <h3>Abdômem</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                          </div>
+                        </li>
+                        <li>
+                          <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+                          <div class="caption center-align">
+                            <h3>Coxa</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -562,10 +604,10 @@
         <div class="row valign-wrapper">
           <div class="col s12 no-padding">
             <ul class="collection">
-              <a href="workout.html" class="collection-item">Adaptação - Março
+              <a href="workout.html" class="collection-item">Fortalecimento - Abril <small style="color: #26a69a; font-weight: 500;">ATIVO</small>
                 <i class="mdi-navigation-chevron-right secondary-content right"></i>
               </a>
-              <a href="workout.html" class="collection-item">Fortalecimento - Abril <small style="color: #26a69a; font-weight: 500;">ATIVO</small>
+              <a href="workout.html" class="collection-item">Adaptação - Março
                 <i class="mdi-navigation-chevron-right secondary-content right"></i>
               </a>
             </ul>
@@ -598,6 +640,7 @@
         // Initializations
         $('.tooltipped').tooltip({delay: 50});
         $('select').material_select();
+        $('.slider').slider({full_width: false});
         $('.datepicker').pickadate({
           selectMonths: true, // Creates a dropdown to control month
           selectYears: 100 // Creates a dropdown of 15 years to control year

@@ -12,6 +12,18 @@ nav ul a {
 ul.tabs {
   margin-bottom: 5px;
 }
+.tabs li.tab a:hover {
+  color: #ff6863;
+}
+.tabs .indicator {
+  background-color: #ff6863;
+}
+.tabs li.tab a {
+  color: #555;
+}
+.tabs li.tab a.active {
+  color: #ff6863;
+}
 
 /* collection */
 .collection {
@@ -22,14 +34,25 @@ ul.tabs {
 }
 a.collection-item {
   color: #333 !important;
-  padding-left: 25px !important;
-  padding: 13px 20px 13px 25px !important;
+  /*padding: 13px 20px 13px 25px !important;*/
 }
 .collection-item a {
   color: rgba(0, 0, 0, 0.87);
 }
 .collection-item a:hover {
   color: #26a69a;
+}
+.collection .collection-item.avatar {
+  padding-left: 78px;
+  height: 72px;
+}
+.collection .collection-item.avatar .circle {
+  width: 50px;
+  height: 50px;
+}
+.collection .collection-item.avatar .title {
+  font-size: 17px;
+  line-height: 1.6em;
 }
 
 .collapsible {
