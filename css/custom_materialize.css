@@ -6,7 +6,11 @@ nav ul a {
   color: #fff;
 }
 .side-nav i {
-  font-size: 1.4em;
+  font-size: 1.6em;
+  color: #26a69a !important;
+}
+.side-nav .collection-item.active, .side-nav .collection-item.active i {
+  color: #fff !important;
 }
 
 ul.tabs {

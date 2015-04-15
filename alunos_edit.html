@@ -69,8 +69,8 @@
       <li class="collection-header"><h5>Treinos</h5></li>
       <a href="#!" class="collection-item"><i class="mdi-action-event secondary-content"></i>Agenda</a>
       <a href="workout.html" class="collection-item"><i class="mdi-editor-insert-chart secondary-content"></i>Relatórios</a>
-      <a href="#!" class="collection-item"><i class="mdi-notification-sms-failed secondary-content"></i>Feedbacks</a>
-      <a href="#!" class="collection-item"><i class="mdi-maps-local-attraction secondary-content"></i>Modelos</a>
+      <a href="feedbacks.html" class="collection-item"><i class="mdi-notification-sms-failed secondary-content"></i>Feedbacks</a>
+      <a href="workout_templates.html" class="collection-item"><i class="mdi-maps-local-attraction secondary-content"></i>Modelos</a>
       <a href="#!" class="collection-item"><i class="mdi-action-accessibility secondary-content"></i>Exercícios</a>
       <li class="collection-header"><h5>Configurações</h5></li>
       <a href="#!" class="collection-item"><i class="mdi-action-account-circle secondary-content"></i>Minha conta</a>
@@ -89,7 +89,17 @@
 
       <!-- Perfil : begin -->
       <div id="profile" class="col s12 no-padding">
-        <br>
+        <div class="row">
+              <div class="col s12">
+                <div class="file-field input-field">
+                  <img src="http://allthingseblog.com/wp-content/uploads/2013/06/circle-profile.jpg" alt="" style="width: 100px; border-radius: 50%; margin-right: 20px;">
+                  <div class="btn" style="top: 2.5rem;">
+                    <span>Trocar foto</span>
+                    <input type="file" />
+                  </div>
+                </div>
+              </div>
+            </div>
         <div class="row valign-wrapper">
           <div class="col s12 no-padding">
             <ul class="collapsible" data-collapsible="accordion">
@@ -588,6 +598,20 @@
                           </div>
                         </li>
                       </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  <i class="mdi-navigation-expand-more"></i>
+                  Inativar
+                </div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <div class="col s12 profile">
+                      <br>
+                      <a href="alunos.html" class="waves-effect waves-light btn red" style="display: block;" onclick="alert('Deseja realmente inativar este aluno?');">Inativar aluno</a>
                     </div>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Meus alunos | Fitness Hero</title>
+    <title>Feedbacks | Fitness Hero</title>
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/custom_materialize.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -32,10 +32,10 @@
       <nav>
         <div class="nav-wrapper valign-wrapper">
           <ul class="left">
-            <li><a href="exercise1.html"><i class="mdi-navigation-arrow-back"></i></a></li>
+            <li><a href="index.html"><i class="mdi-navigation-arrow-back"></i></a></li>
           </ul>
           <span class="center-block center-align">
-            <span href="#!" class="flow-text valign">Meus alunos</span>
+            <span href="#!" class="flow-text valign">Feedbacks</span>
           </span>
           <ul class="right">
             <li><a id="sidenav-toggle" href="#" data-activates="slide-out"><i class="mdi-navigation-menu"></i></a></li>
@@ -49,11 +49,11 @@
     <ul id="slide-out" class="side-nav collection with-header">
       <li class="collection-header"><h5>Alunos</h5></li>
       <a href="alunos_new.html" class="collection-item"><i class="mdi-social-person-add secondary-content"></i> Novo aluno</a>
-      <a href="alunos.html" class="collection-item active"><i class="mdi-social-people secondary-content"></i>Meus alunos</a>
+      <a href="alunos.html" class="collection-item"><i class="mdi-social-people secondary-content"></i>Meus alunos</a>
       <li class="collection-header"><h5>Treinos</h5></li>
       <a href="#!" class="collection-item"><i class="mdi-action-event secondary-content"></i>Agenda</a>
       <a href="workout.html" class="collection-item"><i class="mdi-editor-insert-chart secondary-content"></i>Relatórios</a>
-      <a href="feedbacks.html" class="collection-item"><i class="mdi-notification-sms-failed secondary-content"></i>Feedbacks</a>
+      <a href="#!" class="collection-item active"><i class="mdi-notification-sms-failed secondary-content"></i>Feedbacks</a>
       <a href="workout_templates.html" class="collection-item"><i class="mdi-maps-local-attraction secondary-content"></i>Modelos</a>
       <a href="#!" class="collection-item"><i class="mdi-action-accessibility secondary-content"></i>Exercícios</a>
       <li class="collection-header"><h5>Configurações</h5></li>
@@ -67,32 +67,26 @@
       <div class="col s12 no-padding">
         <ul class="tabs">
           <li class="tab col s3"><a class="active" href="#new">Novos<span class="badge" style="float: none; font-size: .7em; font-weight: 500; position: relative; top: -5px;">(2)</span></a></li>
-          <li class="tab col s3"><a href="#actives">Ativos</a></li>
-          <li class="tab col s3"><a href="#inactives"> Inativos</a></li>
+          <li class="tab col s3"><a href="#history">Histórico</a></li>
         </ul>
       </div>
 
       <!-- Novos : begin -->
       <div id="new" class="col s12 no-padding">
         <div class="row">
-          <form>
-            <div class="input-field col s12" style="margin-top: 0; padding: 0 30px;">
-              <input id="search" placeholder="Buscar" type="text" class="validate" length="25">
-              <i class="mdi-action-search prefix" style="float: right; right: 1px; top: 1px; color: #26a69a;"></i>
-            </div>
-          </form>
+          <br>
           <div class="col s12 no-padding">
             <ul class="collection">
               <a href="alunos_edit.html" class="collection-item avatar">
                 <img src="http://nickmorgandesigns.com/images/profile-circle.png" alt="" class="circle">
                 <span class="title">Guilherme Sipoloni</span>
-                <p style="color: #999; font-size: 1em;">19 anos - Iniciante</p>
+                <p style="color: #999; font-size: 1em;">Avaliou um treino</p>
                 <i class="secondary-content mdi-navigation-chevron-right"></i>
               </a>
               <a href="alunos_edit.html" class="collection-item avatar">
                 <img src="http://allthingseblog.com/wp-content/uploads/2013/06/circle-profile.jpg" alt="" class="circle">
                 <span class="title">Jessica Félix</span>
-                <p style="color: #999; font-size: 1em;">28 anos - Intermediário</p>
+                <p style="color: #999; font-size: 1em;">Enviou uma mensagem</p>
                 <i class="secondary-content mdi-navigation-chevron-right"></i>
               </a>
             </ul>
@@ -101,8 +95,8 @@
       </div>
       <!-- Novos : end -->
 
-      <!-- Ativos : begin -->
-      <div id="actives" class="col s12 no-padding">
+      <!-- Histórico : begin -->
+      <div id="history" class="col s12 no-padding">
         <div class="row">
           <form>
             <div class="input-field col s12" style="margin-top: 0; padding: 0 30px;">
@@ -140,42 +134,8 @@
           </div>
         </div>
       </div>
-      <!-- Ativos : end -->
+      <!-- History : end -->
 
-      <!-- Inativos : begin -->
-      <div id="inactives" class="col s12 no-padding">
-        <div class="row">
-          <form>
-            <div class="input-field col s12" style="margin-top: 0; padding: 0 30px;">
-              <input id="search" placeholder="Buscar" type="text" class="validate" length="25">
-              <i class="mdi-action-search prefix" style="float: right; right: 1px; top: 1px; color: #26a69a;"></i>
-            </div>
-          </form>
-          <div class="col s12 no-padding">
-            <ul class="collection">
-              <a href="alunos_edit.html" class="collection-item avatar">
-                <img src="http://img.surf-report.com/riders/17.jpg" alt="" class="circle">
-                <span class="title">Filipe Toledo</span>
-                <p style="color: #999; font-size: 1em;">19 anos - Atleta</p>
-                <i class="secondary-content mdi-navigation-chevron-right"></i>
-              </a>
-              <a href="alunos_edit.html" class="collection-item avatar">
-                <img src="http://img.surf-report.com/riders/25.jpg" alt="" class="circle">
-                <span class="title">Miguel Puo</span>
-                <p style="color: #999; font-size: 1em;">23 anos - Atleta</p>
-                <i class="secondary-content mdi-navigation-chevron-right"></i>
-              </a>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- Inativos : end -->
-
-      <div class="row">
-        <div class="col s12">
-          <a href="alunos_new.html" class="waves-effect waves-light btn" style="display: block;">Adicionar aluno</a>
-        </div>
-      </div>
     </div>
 
     <!--Import jQuery before materialize.js-->
