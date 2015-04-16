@@ -22,8 +22,9 @@
       .tabs li.tab a {
         padding-top: 5px !important;
       }
-      .tabs li.tab a.active {
+      .tabs li.tab a.active, .tabs li.tab a:hover {
         background-color: #FAFAFA !important;
+        color: #ff6863;
       }
 
       .weekday-label {
@@ -41,12 +42,13 @@
       .tabs li.tab a.active .event-indicator {
         color: #ff6863;
       }
-      .events-count {
+      .selected-date {
         font-size: .9em;
         letter-spacing: .04em;
         font-weight: 500;
         color: #ff6863;
         margin-bottom: 8px;
+        padding-left: 10px;
         text-transform: uppercase;
       }
       .collection-item i.secondary-content {
@@ -95,6 +97,11 @@
 
     <div class="row content">
       <!-- Calendar : begin -->
+      <div class="col s12 center">
+        <a class="waves-effect waves-teal btn-flat left"><i class="mdi-navigation-chevron-left"></i></a>
+        <a class="waves-effect waves-teal btn-flat datepicker" style="cursor: pointer;">16 a 22 de abril</a>
+        <a class="waves-effect waves-teal btn-flat right"><i class="mdi-navigation-chevron-right"></i></a>
+      </div>
       <div class="col s12 calendar">
         <ul class="tabs">
           <li class="tab today">
@@ -140,7 +147,7 @@
       <div id="16-04-2015" class="col s12 no-padding">
         <div class="row">
           <div class="col s12">
-            <div class="events-count">2 Treinos agendados</div>
+            <div class="selected-date">16 de abril de 2015</div>
           </div>
           <div class="col s12 no-padding">
             <ul class="collection">
@@ -163,7 +170,7 @@
       <div id="17-04-2015" class="col s12 no-padding">
         <div class="row">
           <div class="col s12">
-            <div class="events-count">2 Treinos agendados</div>
+            <div class="selected-date">17 de abril de 2015</div>
           </div>
           <div class="col s12 no-padding">
             <ul class="collection">
@@ -185,6 +192,9 @@
       </div>
       <div id="18-04-2015" class="col s12 no-padding">
         <div class="row">
+          <div class="col s12">
+            <div class="selected-date">18 de abril de 2015</div>
+          </div>
           <div class="col s12 no-padding">
             <ul class="collection">
               <li class="collection-item">
@@ -196,6 +206,9 @@
       </div>
       <div id="19-04-2015" class="col s12 no-padding">
         <div class="row">
+          <div class="col s12">
+            <div class="selected-date">19 de abril de 2015</div>
+          </div>
           <div class="col s12 no-padding">
             <ul class="collection">
               <li class="collection-item">
@@ -208,7 +221,7 @@
       <div id="20-04-2015" class="col s12 no-padding">
         <div class="row">
           <div class="col s12">
-            <div class="events-count">3 Treinos agendados</div>
+            <div class="selected-date">20 de abril de 2015</div>
           </div>
           <div class="col s12 no-padding">
             <ul class="collection">
@@ -236,6 +249,9 @@
       </div>
       <div id="21-04-2015" class="col s12 no-padding">
         <div class="row">
+          <div class="col s12">
+            <div class="selected-date">21 de abril de 2015</div>
+          </div>
           <div class="col s12 no-padding">
             <ul class="collection">
               <li class="collection-item">
@@ -248,7 +264,7 @@
       <div id="22-04-2015" class="col s12 no-padding">
         <div class="row">
           <div class="col s12">
-            <div class="events-count">2 Treinos agendados</div>
+            <div class="selected-date">22 de abril de 2015</div>
           </div>
           <div class="col s12 no-padding">
             <ul class="collection">
@@ -292,18 +308,23 @@
             closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
           }
         );
-
-        // Initializations
-        $('.tooltipped').tooltip({delay: 50});
-        $('select').material_select();
-        $('.datepicker').pickadate({
-          selectMonths: true, // Creates a dropdown to control month
-          selectYears: 100 // Creates a dropdown of 15 years to control year
+        // Initialize dropdown button
+        $('.dropdown-button').dropdown({
+          inDuration: 300,
+          outDuration: 225,
+          constrain_width: false, // Does not change width of dropdown to that of the activator
+          hover: false, // Activate on hover
+          gutter: 0, // Spacing from edge
+          belowOrigin: false // Displays dropdown below the button
         });
 
-        $('#first_name').focus();
+        // Initialize datepicker
+        $('.datepicker').pickadate({
+          selectMonths: true, // Creates a dropdown to control month
+          selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
 
-
+        // Initializations
       });
     </script>
   </body>
