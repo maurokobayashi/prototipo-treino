@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Abdominal Simples | Série 1 de 3</title>
+    <title>Abdominal Simples | Fitness Hero</title>
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/custom_materialize.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -16,7 +16,7 @@
             <li><a href="workout.html"><i class="mdi-navigation-arrow-back"></i></a></li>
           </ul>
           <span class="center-block center-align">
-            <span href="#!" class="flow-text valign">Série 1 - Membros inferiores</span>
+            <span href="#!" class="flow-text valign">Abdominal simples</span>
           </span>
           <ul class="right">
             <li><a id="sidenav-toggle" href="#" data-activates="slide-out"><i class="mdi-navigation-menu"></i></a></li>
@@ -32,7 +32,7 @@
       <a href="alunos_new.html" class="collection-item"><i class="mdi-social-person-add secondary-content"></i> Novo aluno</a>
       <a href="alunos.html" class="collection-item"><i class="mdi-social-people secondary-content"></i>Meus alunos</a>
       <li class="collection-header"><h5>Treinos</h5></li>
-      <a href="#!" class="collection-item"><i class="mdi-action-event secondary-content"></i>Agenda</a>
+      <a href="schedule.html" class="collection-item"><i class="mdi-action-event secondary-content"></i>Agenda</a>
       <a href="workout.html" class="collection-item"><i class="mdi-editor-insert-chart secondary-content"></i>Relatórios</a>
       <a href="feedbacks.html" class="collection-item"><i class="mdi-notification-sms-failed secondary-content"></i>Feedbacks</a>
       <a href="workout_templates.html" class="collection-item"><i class="mdi-maps-local-attraction secondary-content"></i>Modelos</a>
@@ -44,14 +44,27 @@
     </ul>
     <!-- Sidenav : end -->
 
-
-    <!-- Container : begin -->
+    <!-- Content : begin -->
     <div class="content">
       <br>
-
       <div class="row valign-wrapper">
         <div class="col s12">
-          <div class="card">
+          <div class="card center-align">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 center-align">
+                  <span style="color: #555;">
+                    <i class="mdi-navigation-arrow-back"></i> Anterior&nbsp;&nbsp;|&nbsp;&nbsp;Próximo <i class="mdi-navigation-arrow-forward"></i>
+                  </span>
+                </div>
+              </div>
+              <span class="card-title activator grey-text text-darken-4">Abdominal Simples</span>
+              <p>
+                <i class="mdi-image-timer"></i>
+                <a style="color: #777;" href="#">45 seg.</a>
+                <input id="exercise-countdown" type="hidden" value="45000">
+              </p>
+            </div>
             <div class="card-image waves-effect waves-block waves-light">
               <video poster="" controls="" preload="" style="text-align:center;width:100%;">
                 <source src="http://m.sworkit.com/assets/exercises/Videos/AbdominalCrunch.mp4">
@@ -59,39 +72,30 @@
                 Seu navegador não suporta este formato de vídeo.
               </video>
             </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">
-                Abdominal Simples
-                <i class="mdi-action-info-outline right"></i>
-              </span>
-              <p>
-                <i class="mdi-image-timer left"></i>
-                <a href="#">45 segundos</a>
-                <input id="exercise-countdown" type="hidden" value="45000">
-              </p>
-            </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">
                 Abdominal Simples
                 <i class="mdi-navigation-close right"></i>
               </span>
               <br>
-              <img src="http://nickmorgandesigns.com/images/profile-circle.png" style="width: 80px;">
-              <p>"O primeiro passo é ficar deitado com as costas encostadas no chão, e com as pernas flexionadas, com os joelhos apontando para o teto e como os pés apoiados no chão. Depois, basta levantar a parte superior do corpo apenas com a força dos músculos abdominais, sem ter pressa ou sem tentar encostar o peito nos joelhos flexionados."</p>
+              <img src="http://nickmorgandesigns.com/images/profile-circle.png" style="width: 70px;">
+              <p style="text-align: left;">"O primeiro passo é ficar deitado com as costas encostadas no chão, e com as pernas flexionadas, com os joelhos apontando para o teto e como os pés apoiados no chão. Depois, basta levantar a parte superior do corpo apenas com a força dos músculos abdominais, sem ter pressa ou sem tentar encostar o peito nos joelhos flexionados."</p>
+              <span class="right">Miguel Taraborelli<br>CREF 010034-G/SP</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Container : end -->
+    <!-- content : end -->
 
     <!-- Footer : begin -->
     <footer class="page-footer blue-grey lighten-5" style="padding-bottom: 5px;">
       <div class="container">
-        <div class="row">
+        <div class="row" style="margin-bottom: 0;">
           <div class="col m3 s3 left-align">
-            <a id="sound-on" class="btn-floating btn-large tooltipped waves-effect waves-light red" data-position="top" data-delay="50" data-tooltip="Som ligado"><i class="mdi-av-volume-up"></i></a>
-            <a id="sound-off" class="btn-floating btn-large tooltipped waves-effect waves-light red accent-1" data-position="top" data-delay="50" data-tooltip="Som desligado" style="display: none;"><i class="mdi-av-volume-off"></i></a>
+            <a id="reset-countdown" class="btn-floating btn-large tooltipped waves-effect waves-light center-block center-align red" data-position="top" data-delay="50" data-tooltip="Reiniciar"><i class="mdi-av-loop"></i></a>
+            <!-- <a id="sound-on" class="btn-floating btn-large tooltipped waves-effect waves-light red" data-position="top" data-delay="50" data-tooltip="Som ligado"><i class="mdi-av-volume-up"></i></a>
+            <a id="sound-off" class="btn-floating btn-large tooltipped waves-effect waves-light red accent-1" data-position="top" data-delay="50" data-tooltip="Som desligado" style="display: none;"><i class="mdi-av-volume-off"></i></a> -->
           </div>
           <div class="col m6 s6 center-block center-align valign-wrapper">
             <h4 style="margin-top: 0; margin-bottom: 0px;">
@@ -99,11 +103,11 @@
               <span id="countdown" style="margin-left: -3px;">45.0</span>
               <span style="margin-left: -7px; font-size: 1.2rem;">s</span>
             </h4>
-            <a id="reset-countdown" class="btn-floating btn-small tooltipped waves-effect waves-light center-block center-align red" data-position="right" data-delay="50" data-tooltip="Reiniciar cronômetro"><i class="mdi-av-loop"></i></a>
+            <!-- <a id="reset-countdown" class="btn-floating btn-small tooltipped waves-effect waves-light center-block center-align red" data-position="right" data-delay="50" data-tooltip="Reiniciar cronômetro"><i class="mdi-av-loop"></i></a> -->
           </div>
           <div class="col m3 s3">
-            <a id="start-countdown" class="btn-floating btn-large tooltipped waves-effect waves-light right red" data-position="top" data-delay="50" data-tooltip="Iniciar cronômetro"><i class="mdi-av-play-arrow"></i></a>
-            <a id="pause-countdown" class="btn-floating btn-large tooltipped waves-effect waves-light right red" data-position="top" data-delay="50" data-tooltip="Pausar cronômetro" style="display: none;"><i class="mdi-av-pause"></i></a>
+            <a id="start-countdown" class="btn-floating btn-large tooltipped waves-effect waves-light right red" data-position="top" data-delay="50" data-tooltip="Iniciar"><i class="mdi-av-play-arrow"></i></a>
+            <a id="pause-countdown" class="btn-floating btn-large tooltipped waves-effect waves-light right red" data-position="top" data-delay="50" data-tooltip="Pausar" style="display: none;"><i class="mdi-av-pause"></i></a>
           </div>
         </div>
       </div>
