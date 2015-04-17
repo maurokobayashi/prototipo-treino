@@ -14,7 +14,7 @@ nav ul a {
 }
 
 ul.tabs {
-  margin-bottom: 5px;
+  /*margin-bottom: 5px;*/
 }
 .tabs li.tab a:hover {
   color: #ff6863;
